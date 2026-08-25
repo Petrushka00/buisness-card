@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buisness card</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <span>logo</span>
+            <span>Ольга Гладышева</span>
+        </div>
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
+            <a href="#projects">Учебные проекты</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h1>Гладышева Ольга</h1>
+            <h3>Разработчик на Python & Frontend-разработчик</h3>
+            <p>Цитата</p>
+            <button>Смотреть проекты</button>
+        </section>
+
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p></p>
+        </section>
+
+        <section id="skills">
+            <h2>Навыки</h2>
+                <div>
+                    <h3>Языки</h3>
+                    <ul>
+                        <li>Python 3.9+</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Инструменты</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>Pycharm</li>
+                        <li>Visual Studio Code</li>
+                        <li>FastAPI</li>
+                        <li>SQLAlchemy</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Концепции</h3>
+                    <ul>
+                        <li>Алгоритмы и структуры данных</li>
+                        <li>ООП</li>
+                        <li>Асинхронность</li>
+                    </ul>
+                </div>
+        </section>
+
+        <section id="projects">
+            <h2>Учебные проекты</h2>
+            <div>
+                <h3>Backend</h3>
+                <ul>
+                    <li>
+                        <h4>MY LIBRARY (FastAPI)</h4>
+                        <p>RESTful API для управления каталогом книг и авторов. 
+                            БД спроектирована через SQLAlchemy ORM, данные валидируются через Pydantic. 
+                            Бизнес-логика изолирована в слой Repository, маршрутизация настроена через APIRouter.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>ToDo-List (Django)</h4>
+                        <p>Веб-приложение для управления задачами на базе архитектуры MVT. Спроектирована БД с отношениями через Django ORM, 
+                            реализована полная CRUD-логика, серверная валидация и защита от CSRF. Настроена панель администратора.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Симулятор аукциона (консольное приложение)</h4>
+                        <p>Реализована симуляция торгов в реальном времени. Применены паттерны Observer (для уведомления участников о ставках) 
+                            и Strategy (для создания ботов с разным поведением). Внедрена валидация ставок и защита баланса.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Frontend</h3>
+                <ul>
+                    <li>
+                        <h4>Background Color Changer</h4>
+                        <p>Интерактивная страница для смены фонового цвета по нажатию кнопки. Реализована 
+                            обработка событий JavaScript и динамическое изменение CSS-стилей. Проект для отработки работы с DOM и событиями.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Таймер обратного отсчёта</h4>
+                        <p>Приложение для отсчёта времени до заданного события. Реализована логика подсчёта дней,
+                             часов, минут и секунд с автоматическим обновлением интерфейса. Отработана работа с объектом Date и setInterval.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>To-Do List </h4>
+                        <p>Классический менеджер задач с возможностью добавления, отметки о выполнении и удаления дел. Реализован базовый CRUD на фронтенде.</p>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Пройденные курсы</h2>
+            <ul>
+                <li>«ИИ и генеративные модели» - Т-банк</li>
+                <li>«Алгоритмы и структура данных» - VK education</li>
+                <li>«Основы Git и GitHub» - Stepik</li>
+                <li>«Знакомьтесь, Django» - Stepik</li>
+                <li>«FastAPI для начинающих» - Stepik</li>
+            </ul>
+        </section>
+
+        <section id="contacts">
+            <h2>Связаться со мной</h2>
+            <ul>
+                <li><strong>Telegram:</strong> <a href="https://t.me/Povelitelcocosov">@Povelitelcocosov</a></li>
+                <li><strong>Email:</strong> <a href="mailto:boringslipper@gmail.com">boringslipper@gmail.com</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/Petrushka00">Petrushka00</a></li>
+                <li><strong>Телефон:</strong> <a href="tel:+79960291956">+7 996 029-19-56</a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        
+        <div class="footer-info">
+            <p class="footer-copy">© 2026 Ольга Гладышева</p>
+            <p class="footer-tagline">Python-разработчик из Калининграда</p>
+        </div>
+    
+    </footer>
+</body>
+</html>
