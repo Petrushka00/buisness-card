@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buisness card</title>
+    <title>Business card</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <div>
-            <span>logo</span>
-            <span>Ольга Гладышева</span>
+        <div class="header-brand">
+            <span class="logo"><img src="icons/heart.jpg" alt="LoveIT"></span>
+            <span class="brand-name">Ольга Гладышева</span>
         </div>
-        <nav>
+        <nav class="main-nav">
             <a href="#about">Обо мне</a>
             <a href="#skills">Навыки</a>
             <a href="#projects">Учебные проекты</a>
@@ -22,100 +22,126 @@
     </header>
     
     <main>
-        <section>
-            <h1>Гладышева Ольга</h1>
-            <h3>Разработчик на Python & Frontend-разработчик</h3>
-            <p>Цитата</p>
-            <button>Смотреть проекты</button>
+        <section class="hero">
+            <div class="container her-content">
+                <h1>Гладышева Ольга</h1>
+                <h3>Разработчик на Python & Frontend-разработчик</h3>
+                <p class="quote">Цитата</p>
+                <button class="btn btn-primary">Смотреть проекты</button>
+                <a href="https://github.com/Petrushka00?tab=repositories" target="_blank" class="btn btn-primary">Смотреть проекты на GitHub</a>
+            </div> 
         </section>
 
-        <section id="about">
-            <h2>Обо мне</h2>
-            <p></p>
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2>Обо мне</h2>
+                <p class="about-text">Я стремлюсь к  
+                    интенсивному профессиональному росту и готова оперативно 
+                    осваивать новые технологии.  
+                    Быстро адаптируюсь к новым 
+                    условиям, люблю докапываться 
+                    до сути и разбираться, как технологии работают изнутри, мне нравится развиваться в разных направлениях 
+                    и выходить за рамки привычного. 
+                </p>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Навыки</h2>
-                <div>
-                    <h3>Языки</h3>
-                    <ul>
-                        <li>Python 3.9+</li>
-                        <li>JavaScript</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Инструменты</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>Pycharm</li>
-                        <li>Visual Studio Code</li>
-                        <li>FastAPI</li>
-                        <li>SQLAlchemy</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Концепции</h3>
-                    <ul>
-                        <li>Алгоритмы и структуры данных</li>
-                        <li>ООП</li>
-                        <li>Асинхронность</li>
-                    </ul>
-                </div>
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2>Навыки</h2>
+                    <div class="skill-wrapper">
+                        <div class="skill-card">
+                            <div class="skill-text">
+                                <h3>Языки</h3>
+                                <ul>
+                                    <li>Python 3.9+</li>
+                                    <li>JavaScript</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-text">
+                                <h3>Инструменты</h3>
+                                <ul>
+                                    <li>Git</li>
+                                    <li>Pycharm</li>
+                                    <li>Visual Studio Code</li>
+                                    <li>FastAPI</li>
+                                    <li>SQLAlchemy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-text">
+                                <h3>Концепции</h3>
+                                <ul>
+                                    <li>Алгоритмы и структуры данных</li>
+                                    <li>ООП</li>
+                                    <li>Асинхронность</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="section projects-section">
+        <div class="container">
             <h2>Учебные проекты</h2>
-            <div>
-                <h3>Backend</h3>
-                <ul>
-                    <li>
-                        <h4>MY LIBRARY (FastAPI)</h4>
-                        <p>RESTful API для управления каталогом книг и авторов. 
-                            БД спроектирована через SQLAlchemy ORM, данные валидируются через Pydantic. 
-                            Бизнес-логика изолирована в слой Repository, маршрутизация настроена через APIRouter.
-                        </p>
-                    </li>
-                    <li>
-                        <h4>ToDo-List (Django)</h4>
-                        <p>Веб-приложение для управления задачами на базе архитектуры MVT. Спроектирована БД с отношениями через Django ORM, 
-                            реализована полная CRUD-логика, серверная валидация и защита от CSRF. Настроена панель администратора.
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Симулятор аукциона (консольное приложение)</h4>
-                        <p>Реализована симуляция торгов в реальном времени. Применены паттерны Observer (для уведомления участников о ставках) 
-                            и Strategy (для создания ботов с разным поведением). Внедрена валидация ставок и защита баланса.
-                        </p>
-                    </li>
-                </ul>
-            </div>
+            <div class="projects-wrapper">
+                <div class="project-category">
+                    <h3>Backend</h3>
+                    <ul class="project-list">
+                        <li class="project-card">
+                            <h4>MY LIBRARY (FastAPI)</h4>
+                            <p>RESTful API для управления каталогом книг и авторов. 
+                                БД спроектирована через SQLAlchemy ORM, данные валидируются через Pydantic. 
+                                Бизнес-логика изолирована в слой Repository, маршрутизация настроена через APIRouter.
+                            </p>
+                        </li>
+                        <li class="project-card">
+                            <h4>ToDo-List (Django)</h4>
+                            <p>Веб-приложение для управления задачами на базе архитектуры MVT. Спроектирована БД с отношениями через Django ORM, 
+                                реализована полная CRUD-логика, серверная валидация и защита от CSRF. Настроена панель администратора.
+                            </p>
+                        </li>
+                        <li class="project-card">
+                            <h4>Симулятор аукциона (консольное приложение)</h4>
+                            <p>Реализована симуляция торгов в реальном времени. Применены паттерны Observer (для уведомления участников о ставках) 
+                                и Strategy (для создания ботов с разным поведением). Внедрена валидация ставок и защита баланса.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
 
-            <div>
-                <h3>Frontend</h3>
-                <ul>
-                    <li>
-                        <h4>Background Color Changer</h4>
-                        <p>Интерактивная страница для смены фонового цвета по нажатию кнопки. Реализована 
-                            обработка событий JavaScript и динамическое изменение CSS-стилей. Проект для отработки работы с DOM и событиями.
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Таймер обратного отсчёта</h4>
-                        <p>Приложение для отсчёта времени до заданного события. Реализована логика подсчёта дней,
-                             часов, минут и секунд с автоматическим обновлением интерфейса. Отработана работа с объектом Date и setInterval.
-                        </p>
-                    </li>
-                    <li>
-                        <h4>To-Do List </h4>
-                        <p>Классический менеджер задач с возможностью добавления, отметки о выполнении и удаления дел. Реализован базовый CRUD на фронтенде.</p>
-                    </li>
-                </ul>
+                <div class="project-category">
+                    <h3>Frontend</h3>
+                    <ul class="project-list">
+                        <li class="project-card">
+                            <h4>Background Color Changer</h4>
+                            <p>Интерактивная страница для смены фонового цвета по нажатию кнопки. Реализована 
+                                обработка событий JavaScript и динамическое изменение CSS-стилей. Проект для отработки работы с DOM и событиями.
+                            </p>
+                        </li>
+                        <li class="project-card">
+                            <h4>Таймер обратного отсчёта</h4>
+                            <p>Приложение для отсчёта времени до заданного события. Реализована логика подсчёта дней,
+                                часов, минут и секунд с автоматическим обновлением интерфейса. Отработана работа с объектом Date и setInterval.
+                            </p>
+                        </li>
+                        <li class="project-card">
+                            <h4>To-Do List </h4>
+                            <p>Классический менеджер задач с возможностью добавления, отметки о выполнении и удаления дел. Реализован базовый CRUD на фронтенде.</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
+        </div>
         </section>
 
-        <section>
+        <section class="section courses-section">
+        <div class="container">
             <h2>Пройденные курсы</h2>
             <ul>
                 <li>«ИИ и генеративные модели» - Т-банк</li>
@@ -124,16 +150,19 @@
                 <li>«Знакомьтесь, Django» - Stepik</li>
                 <li>«FastAPI для начинающих» - Stepik</li>
             </ul>
+        </div>
         </section>
 
-        <section id="contacts">
-            <h2>Связаться со мной</h2>
-            <ul>
-                <li><strong>Telegram:</strong> <a href="https://t.me/Povelitelcocosov">@Povelitelcocosov</a></li>
-                <li><strong>Email:</strong> <a href="mailto:boringslipper@gmail.com">boringslipper@gmail.com</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/Petrushka00">Petrushka00</a></li>
-                <li><strong>Телефон:</strong> <a href="tel:+79960291956">+7 996 029-19-56</a></li>
-            </ul>
+        <section id="contacts" class="section contacts-section">
+            <div class="container">
+                <h2>Связаться со мной</h2>
+                <ul>
+                    <li><strong>Telegram:</strong> <a href="https://t.me/Povelitelcocosov">@Povelitelcocosov</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:boringslipper@gmail.com">boringslipper@gmail.com</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/Petrushka00">Petrushka00</a></li>
+                    <li><strong>Телефон:</strong> <a href="tel:+79960291956">+7 996 029-19-56</a></li>
+                </ul>
+            </div>
         </section>
     </main>
     
