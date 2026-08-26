@@ -384,7 +384,9 @@ header {
     background: var(--bg-card);
     padding: 20px;
     margin-bottom: 15px;
-    justify-content: start;
+    justify-content: center;
+    min-height: 350px;
+    width: 380px;
 }
 
 .course-card:hover {
@@ -394,10 +396,10 @@ header {
 }
 
 .img-course{
-    width: 350px;
+    width: 340px;
     height: 250px;
     border-radius: 16px;
-    padding: 10px;
+    padding-top: 10px;
 }
 
 .card-link{
