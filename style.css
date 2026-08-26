@@ -358,7 +358,52 @@ header {
     margin-bottom: 15px;
 }
 
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-pink);
+    box-shadow: 0 10px 40px rgba(255, 45, 139, 0.1);
+}
 
+/* КУРСЫ */
+.course-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: var(--transition);
+    background: var(--bg-card);
+    padding: 20px;
+    margin-bottom: 15px;
+    justify-content: start;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-pink);
+    box-shadow: 0 10px 40px rgba(255, 45, 139, 0.1);
+}
+
+.img-course{
+    width: 350px;
+    height: 250px;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.card-link{
+    text-decoration: none;
+    color: inherit;
+}
 
 /* FOOTER */
 .footer{
