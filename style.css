@@ -227,7 +227,7 @@ header {
 
 /* НАВЫКИ */
 
-.skill-wrapper{
+.skill-container{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -258,28 +258,64 @@ header {
   outline: none; 
 }
 
-.skill-card {
-    flex: 1 1 250px; 
-    max-width: 350px;
-    min-width: 200px;
-    background: var(--bg-card);
-    padding: 30px 25px;
+
+
+.skill-button{
+    display: flex;
+    justify-content: center;
+    flex: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.category-btn{
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-width: 2px;
+    border-color: var(--accent-pink);
+    background: transparent;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+    line-height: 1;
+    color: var(--accent-pinl-light);
+}
+
+.category-btn:hover{
+    color: var(--bg-secondary);
+    transition: var(--transition);
+    background-color: var(--accent-pink);
+    box-shadow: 0 4px 20px var(--shadow-pink);
+}
+
+.skill-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: var(--bg-secondary);
+    padding: 40px 10px;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.06);
-    transition: var(--transition);
-}
-
-.skill-text{
-    padding-left: 20px;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--border-pink);
     box-shadow: 0 10px 40px rgba(255, 45, 139, 0.1);
 }
 
 
+.skill-name{
+    color: var(--text-secondary);
+    padding: 5px 20px;
+    border: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: var(--text-secondary);
+}
 
 
 /* ПРОЕКТЫ */
