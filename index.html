@@ -26,7 +26,7 @@
             <div class="container her-content">
                 <h1>Гладышева Ольга</h1>
                 <h3>Разработчик на Python & Frontend-разработчик</h3>
-                <p class="quote">Цитата</p>
+                <p class="quote">„Безграмотными в XXI веке будут не те, кто не умеет читать и писать, а те, кто не умеет учиться, разучиваться и переучиваться“ - Элвин Тоффлер.</p>
                 <button class="btn btn-primary">Смотреть проекты</button>
                 <a href="https://github.com/Petrushka00?tab=repositories" target="_blank" class="btn btn-primary">Смотреть проекты на GitHub</a>
             </div> 
@@ -49,6 +49,9 @@
         <section id="skills" class="section skills-section">
             <div class="container">
                 <h2>Навыки</h2>
+                <div class="search-box">
+                <input type="text" class="search-input" placeholder="Найти навык...">
+                </div>
                     <div class="skill-wrapper">
                         <div class="skill-card">
                             <div class="skill-text">
@@ -90,51 +93,59 @@
         <div class="container">
             <h2>Учебные проекты</h2>
             <div class="projects-wrapper">
-                <div class="project-category">
-                    <h3>Backend</h3>
-                    <ul class="project-list">
-                        <li class="project-card">
+                
+            <div class="category-name">
+                <h3>Backend</h3>
+            </div>
+                    <div class="project-category">
+                        <div class="project-card">
                             <h4>MY LIBRARY (FastAPI)</h4>
+                            <img src="images/my-library.PNG" alt="Печалька:(" class="project-img">
                             <p>RESTful API для управления каталогом книг и авторов. 
                                 БД спроектирована через SQLAlchemy ORM, данные валидируются через Pydantic. 
                                 Бизнес-логика изолирована в слой Repository, маршрутизация настроена через APIRouter.
                             </p>
-                        </li>
-                        <li class="project-card">
+                        </div>
+                        <div class="project-card">
                             <h4>ToDo-List (Django)</h4>
+                            <img src="" alt="Печалька:(" class="project-img">
                             <p>Веб-приложение для управления задачами на базе архитектуры MVT. Спроектирована БД с отношениями через Django ORM, 
                                 реализована полная CRUD-логика, серверная валидация и защита от CSRF. Настроена панель администратора.
                             </p>
-                        </li>
-                        <li class="project-card">
-                            <h4>Симулятор аукциона (консольное приложение)</h4>
+                        </div>
+                        <div class="project-card">
+                            <h4>Симулятор аукциона</h4>
+                            <img src="" alt="Печалька:(" class="project-img">
                             <p>Реализована симуляция торгов в реальном времени. Применены паттерны Observer (для уведомления участников о ставках) 
                                 и Strategy (для создания ботов с разным поведением). Внедрена валидация ставок и защита баланса.
                             </p>
-                        </li>
-                    </ul>
+                        </div>
+                    
                 </div>
 
-                <div class="project-category">
+                <div class="category-name">
                     <h3>Frontend</h3>
-                    <ul class="project-list">
-                        <li class="project-card">
+                </div> 
+                <div class="project-category">
+                        <div class="project-card">
                             <h4>Background Color Changer</h4>
+                            <img src="images/bg-v2.PNG" alt="Печалька:(" class="project-img">
                             <p>Интерактивная страница для смены фонового цвета по нажатию кнопки. Реализована 
                                 обработка событий JavaScript и динамическое изменение CSS-стилей. Проект для отработки работы с DOM и событиями.
                             </p>
-                        </li>
-                        <li class="project-card">
+                        </div>
+                        <div class="project-card">
                             <h4>Таймер обратного отсчёта</h4>
+                            <img src="images/counter.PNG" alt="Печалька:(" class="project-img">
                             <p>Приложение для отсчёта времени до заданного события. Реализована логика подсчёта дней,
                                 часов, минут и секунд с автоматическим обновлением интерфейса. Отработана работа с объектом Date и setInterval.
                             </p>
-                        </li>
-                        <li class="project-card">
+                        </div>
+                        <div class="project-card">
                             <h4>To-Do List </h4>
+                            <img src="" alt="Печалька:(" class="project-img">
                             <p>Классический менеджер задач с возможностью добавления, отметки о выполнении и удаления дел. Реализован базовый CRUD на фронтенде.</p>
-                        </li>
-                    </ul>
+                        </div>
                 </div>
             </div>
         </div>
@@ -143,13 +154,13 @@
         <section class="section courses-section">
         <div class="container">
             <h2>Пройденные курсы</h2>
-            <ul>
-                <li>«ИИ и генеративные модели» - Т-банк</li>
-                <li>«Алгоритмы и структура данных» - VK education</li>
-                <li>«Основы Git и GitHub» - Stepik</li>
-                <li>«Знакомьтесь, Django» - Stepik</li>
-                <li>«FastAPI для начинающих» - Stepik</li>
-            </ul>
+            <ol>
+                <li class="course-card">«ИИ и генеративные модели» - Т-банк</li>
+                <li class="course-card">«Алгоритмы и структура данных» - VK education</li>
+                <li class="course-card">«Основы Git и GitHub» - Stepik</li>
+                <li class="course-card">«Знакомьтесь, Django» - Stepik</li>
+                <li class="course-card">«FastAPI для начинающих» - Stepik</li>
+            </ol>
         </div>
         </section>
 
@@ -166,10 +177,12 @@
         </section>
     </main>
     
-    <footer>
+    <footer class="footer">
         
         <div class="footer-info">
             <p class="footer-copy">© 2026 Ольга Гладышева</p>
+        </div>
+        <div>
             <p class="footer-tagline">Python-разработчик из Калининграда</p>
         </div>
     

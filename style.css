@@ -42,6 +42,7 @@ body{
 .section {
     padding: 80px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    scroll-margin-top: 70px;
 }
 
 header {
@@ -233,6 +234,30 @@ header {
     justify-content: center;
 }
 
+.search-box {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 5;
+}
+
+
+.search-input {
+  display: block;
+  width: 100%; 
+  font-size: 16px;
+  padding: 12px 20px 12px 42px; 
+  background-image: url("icons/icons8-search.svg");
+  background-position: 14px center;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-color: transparent;
+  border: 1px solid var(--accent-pink, #ff007f); 
+  border-radius: 4px; 
+  color: inherit; 
+  outline: none; 
+}
+
 .skill-card {
     flex: 1 1 250px; 
     max-width: 350px;
@@ -255,24 +280,55 @@ header {
 }
 
 
+
+
 /* ПРОЕКТЫ */
 
 
 .project-wrapper{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     gap: 30px;
 }
 
+.category-name{
+    margin-bottom: 15px;
+}
 
-.project-category {
-    flex: 1 1 250px; 
-    max-width: 1200px;
-    min-width: 800px;
-    background: var(--bg-card);
-    padding: 30px 25px;
+.project-category{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.project-img{
     border-radius: 16px;
+    margin: 10px 0;
+    height: 180px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 16px;
+    overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.06);
     transition: var(--transition);
+    background: var(--bg-card);
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+
+
+/* FOOTER */
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
