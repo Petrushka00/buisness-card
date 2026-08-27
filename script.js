@@ -1,3 +1,39 @@
+const themeButton = document.getElementById("themeToggle")
+
+const savedTheme = localStorage.getItem("theme")
+
+if (savedTheme){
+    document.querySelector("html").setAttribute("data-theme", savedTheme)
+}else{
+    document.querySelector("html").setAttribute("date-theme", "dark")
+    localStorage.setItem("theme", "dark")
+}
+
+
+themeToggle.addEventListener("click", function() {
+    const currentTheme = document.querySelector("html").getAttribute("data-theme");
+    
+    if (currentTheme == "dark") {
+        document.querySelector("html").setAttribute("data-theme", "light" );
+        localStorage.setItem("theme", "light");
+        this.textContent = "Темная тема";
+    } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+        this.textContent = "Светлая тема";
+    }
+});
+
+if (savedTheme == "dark") {
+    themeToggle.textContent = "Светлая тема";
+} else {
+    themeToggle.textContent = "Темная тема";
+}
+
+
+
+
+
 const skillData = [
     { name: 'Python', categories: ['backend', 'tools'] },
     { name: 'FastAPI', categories: ['backend']},
@@ -21,9 +57,11 @@ const filterButtons = document.querySelectorAll(".category-btn");
 let selectedCategory = "all";
 let searchText = "";
 
+//Фильтрация по категориям
 
-let filtred;
+
 function filterSkills(){
+    let filtred;
     if (selectedCategory == "all"){
         filtred = skillData;
     }
@@ -43,8 +81,37 @@ filterButtons.forEach(btn => {
         selectedCategory =this.dataset.filter
         filterSkills()
     })
-})
+});
 
+//Поиск
+
+function searchSkill(){
+    let filtered;
+    if (selectedCategory == "all") {
+        filtered = skillData;
+    } else {
+        filtered = skillData.filter(skill => skill.categories.includes(selectedCategory));
+    }
+    
+   
+    if (searchText.trim() !== "") {
+        const query = searchText.toLowerCase().trim();
+        filtered = filtered.filter(skill => skill.name.toLowerCase().includes(query));
+    }
+    
+    
+    if (filtered.length == 0) {
+        wrapper.innerHTML = `<p class="skills-message">Ничего не найдено</p>`;
+        return;
+    }
+
+    wrapper.innerHTML = filtered.map(skill => `<p class="skill-name">${skill.name}</p>`).join("")
+}
+
+searchInput.addEventListener("input", function(){
+    searchText=this.value;
+    searchSkill()
+})
 
 
 

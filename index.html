@@ -12,7 +12,9 @@
         <div class="header-brand">
             <span class="logo"><img src="icons/heart.jpg" alt="LoveIT"></span>
             <span class="brand-name">Ольга Гладышева</span>
+            <button id="themeToggle" class="btn">Светлая тема</button>
         </div>
+
         <nav class="main-nav">
             <a href="#about">Обо мне</a>
             <a href="#skills">Навыки</a>
@@ -22,13 +24,13 @@
     </header>
     
     <main>
-        <section class="hero">
+        <section class="section hero">
             <div class="container her-content">
                 <h1>Гладышева Ольга</h1>
                 <h3>Разработчик на Python & Frontend-разработчик</h3>
                 <p class="quote">„Безграмотными в XXI веке будут не те, кто не умеет читать и писать, а те, кто не умеет учиться, разучиваться и переучиваться“ - Элвин Тоффлер.</p>
-                <button class="btn btn-primary">Смотреть проекты</button>
-                <a href="https://github.com/Petrushka00?tab=repositories" target="_blank" class="btn btn-primary">Смотреть проекты на GitHub</a>
+                
+                <a href="https://github.com/Petrushka00" target="_blank" class="btn btn-primary">Смотреть проекты на GitHub</a>
             </div> 
         </section>
 
@@ -96,14 +98,14 @@
                         </div>
                         <div class="project-card">
                             <h4>ToDo-List (Django)</h4>
-                            <img src="" alt="Печалька:(" class="project-img">
+                            <img src="images/django_todo.PNG" alt="Печалька:(" class="project-img">
                             <p>Веб-приложение для управления задачами на базе архитектуры MVT. Спроектирована БД с отношениями через Django ORM, 
                                 реализована полная CRUD-логика, серверная валидация и защита от CSRF. Настроена панель администратора.
                             </p>
                         </div>
                         <div class="project-card">
                             <h4>Симулятор аукциона</h4>
-                            <img src="" alt="Печалька:(" class="project-img">
+                            <img src="images/simulator.PNG" alt="Печалька:(" class="project-img">
                             <p>Реализована симуляция торгов в реальном времени. Применены паттерны Observer (для уведомления участников о ставках) 
                                 и Strategy (для создания ботов с разным поведением). Внедрена валидация ставок и защита баланса.
                             </p>
@@ -131,7 +133,7 @@
                         </div>
                         <div class="project-card">
                             <h4>To-Do List </h4>
-                            <img src="" alt="Печалька:(" class="project-img">
+                            <img src="images/todo-front.jpg" alt="Печалька:(" class="project-img">
                             <p>Классический менеджер задач с возможностью добавления, отметки о выполнении и удаления дел. Реализован базовый CRUD на фронтенде.</p>
                         </div>
                 </div>
@@ -180,12 +182,12 @@
         <section id="contacts" class="section contacts-section">
             <div class="container">
                 <h2>Связаться со мной</h2>
-                <ul>
-                    <li><strong>Telegram:</strong> <a href="https://t.me/Povelitelcocosov">@Povelitelcocosov</a></li>
-                    <li><strong>Email:</strong> <a href="mailto:boringslipper@gmail.com">boringslipper@gmail.com</a></li>
-                    <li><strong>GitHub:</strong> <a href="https://github.com/Petrushka00">Petrushka00</a></li>
-                    <li><strong>Телефон:</strong> <a href="tel:+79960291956">+7 996 029-19-56</a></li>
-                </ul>
+                
+                    <div class="contact-container"><strong>Telegram:</strong> <a href="https://t.me/Povelitelcocosov">@Povelitelcocosov</a></div>
+                    <div class="contact-container"><strong>Email:</strong> <a href="mailto:boringslipper@gmail.com">boringslipper@gmail.com</a></div>
+                    <div class="contact-container"><strong>GitHub:</strong> <a href="https://github.com/Petrushka00">Petrushka00</a></div>
+                    <div class="contact-container"><strong>Телефон:</strong> <a href="tel:+79960291956">+7 996 029-19-56</a></div>
+                
             </div>
         </section>
     </main>
