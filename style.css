@@ -291,6 +291,12 @@ header {
     box-shadow: 0 4px 20px var(--shadow-pink);
 }
 
+.active{
+    color: var(--bg-secondary);
+    background-color: var(--accent-pink);
+    box-shadow: 0 4px 20px var(--shadow-pink);
+}
+
 .skill-wrapper{
     display: flex;
     flex-wrap: wrap;
