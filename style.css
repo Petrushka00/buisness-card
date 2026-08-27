@@ -387,6 +387,7 @@ header {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 30px;
 }
 
@@ -748,7 +749,9 @@ header {
     
     /* Проекты */
     .project-wrapper {
-        gap: 20px; 
+        flex-direction: column;    
+        align-items: center;      
+        gap: 20px;
     }
     
     .project-card {
